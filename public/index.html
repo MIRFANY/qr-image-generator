@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>QR Image Generator</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="container">
+      <h1>QR Image Generator</h1>
+      <form id="qr-form">
+        <label for="url">Enter URL or text:</label>
+        <input id="url" name="url" type="text" placeholder="https://example.com" required />
+        <div class="actions">
+          <button type="submit">Generate</button>
+          <button id="download" type="button" disabled>Download PNG</button>
+        </div>
+      </form>
+
+      <section class="preview">
+        <h2>Preview</h2>
+        <div id="placeholder">Your QR will appear here</div>
+        <img id="qr-img" alt="QR preview" src="" hidden />
+      </section>
+
+      <footer>
+        <small>Served from local Express server. CLI still available: <code>npm run cli</code></small>
+      </footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
